@@ -1,0 +1,285 @@
+<!-- saved from url=(0018)https://umxyz.com/ -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="save/favicon.ico">
+    <title>um's homepage</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="save/assets/css/main.css">
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="save/assets/css/noscript.css" /></noscript>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#222325">
+    <meta name="msapplication-navbutton-color" content="#222325">
+    <!-- <link rel="stylesheet" href="save/assets/css/font.css"> -->
+    <link rel="stylesheet" href="save/assets/css/style.css">
+    <meta name="theme-color" content="#22849f">
+    <style type="text/css">
+        header {
+            font-weight: lighter;
+            background-image: url("save/homepage.jpg");
+            color: white;
+            width: 100%;
+            background-size: cover;
+            background-position: center center;
+            height: inherit;
+            margin: 0 auto
+        }
+        
+        body {
+            height: 100%;
+            /*第二次图片加载*/
+            /* background-image: url("save/homepage.jpg"); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        
+        body:after {
+            content: '';
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: inherit;
+            opacity: 0;
+            z-index: 1;
+            background-color: #ffffff;
+            /*第一次图片加载显示时间很短用上随机图效果更好 可以藏小彩蛋 && ghs*/
+            /* background-image: url("save/homepage.jpg"); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            -moz-transition: opacity 1.75s ease-out;
+            -webkit-transition: opacity 1.75s ease-out;
+            -ms-transition: opacity 1.75s ease-out;
+            transition: opacity 1.75s ease-out;
+        }
+        
+        body.is-loading:after {
+            opacity: 1;
+        }
+        
+        .menu {}
+        
+        .menu ul,
+        .menu li {
+            margin: 0;
+            padding: 0;
+            list-style: none outside;
+        }
+        
+        .menu>ul {
+            overflow: auto;
+            display: inline-block;
+        }
+        
+        .menu a,
+        .menu span {
+            cursor: default;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 5px;
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-decoration: none;
+            color: MenuText;
+        }
+        
+        .menu a:hover,
+        .menu span:hover,
+        .menu li:hover>a,
+        .menu li:hover>span {
+            color: HighlightText;
+        }
+        
+        .menu li:hover {
+            background-color: Highlight;
+        }
+        
+        .menu li:hover>ul {
+            display: block;
+        }
+        
+        .menu>ul>li {
+            float: left;
+        }
+        
+        .menu>ul>li ul {
+            display: none;
+            float: left;
+            background-color: #fff;
+            /* border: 1px solid Highlight; */
+            position: absolute;
+        }
+        
+        .menu>ul>li li {
+            padding-left: 25px;
+            margin: 2px;
+            background: transparent url(data:image/gif;base64,R0lGODlhEAAQAIAAAJmZmf///yH5BAAAAAAALAAAAAAQABAAAAIjhI9pwe2+nmRRIQrmjBrmYB1Y93Ak+IXVd6LtiIZwa5JqWAAAOw==) no-repeat 5px center;
+            width: 150px;
+        }
+        
+        .menu>ul>li>ul>li ul {
+            margin-left: 140px;
+            margin-top: -30px;
+        }
+        
+        .menu li.expand>a,
+        .menu li.expand>span {
+            background: transparent url(data:image/png;base64,R0lGODlhAwAQAIABAAAAAP///yH5BAEAAAEALAAAAAADABAAAAIKjI8JBtv/wko0FQA7) no-repeat right center;
+            padding-right: 10px;
+            margin-right: 5px;
+        }
+        
+        .menu>ul>li.expand>a,
+        .menu>ul>li.expand>span {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAACwAX77AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAaSURBVBhXY2BgYPiPAwOFMSXBgjAA0wnmAwASVQv19UVKmwAAAABJRU5ErkJggg==);
+        }
+    </style>
+</head>
+
+<body class="">
+    <header>
+        <main>
+            <div class="content content-intro">
+                <div class="content-inner" style="background: unset;"><canvas id="background" width="2543" height="888"></canvas>
+                    <div class="wrap fade in">
+                        <h2 class="content-title">um's homepage</h2>
+                        <br>
+                        <h3 class="content-subtitle" original-content="U CAN Drag Mouse ON This Page"><span>U</span><span> </span><span>C</span><span>A</span><span>N</span><span> </span><span>D</span><span>r</span><span>a</span><span>g</span><span> </span><span>M</span><span>o</span><span>u</span><span>s</span><span>e</span><span> </span><span>O</span><span>N</span><span> </span><span>T</span><span>h</span><span>i</span><span>s</span><span> </span><span>P</span><span>a</span><span>g</span><span>e</span></h3>
+                        <h2 id="signature" data-translate="signature" original-content="Web Developer - Internet loafer"></h2>
+                        <a class="enter">Page Down</a>
+                        <div class="arrow arrow-1"></div>
+                        <div class="arrow arrow-2"></div>
+                    </div>
+                </div>
+                <div class="shape-wrap"><svg class="shape" width="100%" height="100vh" preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns:pathdata="https://www.codrops.com/" style="fill: rgb(30, 31, 33);">
+                    <path d="M-44-50C-52.71 28.52 15.86 8.186 184 14.69 383.3 22.39 462.5 12.58 638 14 835.5 15.6 987 6.4 1194 13.86 1661 30.68 1652-36.74 1582-140.1 1512-243.5 15.88-589.5-44-50Z" pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"></path>
+                </svg></div>
+            </div>
+            <script>
+                window.$ = selector => document.querySelector(selector)
+                const getOriginalContent = selector => $(selector).getAttribute("original-content")
+                window.subtitle = getOriginalContent(".content-subtitle")
+                window.signature = getOriginalContent("#signature")
+                window.config = {
+                    SIM_RESOLUTION: 128,
+                    DYE_RESOLUTION: 1024,
+                    CAPTURE_RESOLUTION: 512,
+                    DENSITY_DISSIPATION: 1,
+                    VELOCITY_DISSIPATION: 0.2,
+                    PRESSURE: 0.8,
+                    PRESSURE_ITERATIONS: 20,
+                    CURL: 30,
+                    SPLAT_RADIUS: 0.25,
+                    SPLAT_FORCE: 6000,
+                    SHADING: true,
+                    COLORFUL: true,
+                    COLOR_UPDATE_SPEED: 10,
+                    PAUSED: false,
+                    BACK_COLOR: {
+                        r: 30,
+                        g: 31,
+                        b: 33
+                    },
+                    TRANSPARENT: false,
+                    BLOOM: true,
+                    BLOOM_ITERATIONS: 8,
+                    BLOOM_RESOLUTION: 256,
+                    BLOOM_INTENSITY: 0.4,
+                    BLOOM_THRESHOLD: 0.8,
+                    BLOOM_SOFT_KNEE: 0.7,
+                    SUNRAYS: true,
+                    SUNRAYS_RESOLUTION: 196,
+                    SUNRAYS_WEIGHT: 1.0,
+                }
+            </script>
+            <script src="save/assets/js/main.js"></script>
+            <script src="save/assets/js/background.js"></script>
+        </main>
+    </header>
+
+    <header>
+
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- 网页点线粒子特效 -->
+            <!-- <script color="0,0,0" opacity="0.8" count="129" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js" type="text/javascript" charset="utf-8"></script> -->
+            <!-- Main -->
+            <section id="main">
+                <a href="https://blog.umxyz.com/"><span class="avatar"><img src="save/um.jpg" height="150" width="150" alt=""></span></a>
+                <h1><a href="https://blog.umxyz.com/">um</a></h1>
+                <h5>Hello World</h5>
+                <footer>
+                    <div id="mainnav" class="menu">
+                        <ul>
+                            <li class="expand"><a href="https://api.umxyz.com/bing">small tools</a>
+                                <ul>
+                                    <li><a href="https://api.umxyz.com/bing" target="_blank">每日Bing图</a></li>
+                                    <li><a href="https://compass.umxyz.com/" target="_blank">网页导航</a></li>
+                                    <li><a href="https://tools.yum6.cn/" target="_blank">工具合集</a></li>
+                                </ul>
+                            </li>
+                            <li class="expand">&nbsp;&nbsp;||&nbsp;&nbsp;</li>
+                            <li class="expand"><a href="https://fun.umxyz.com/" target="_blank">Have Fun</a>
+                                <ul>
+                                    <li><a href="https://fun.umxyz.com/mikutap">mikutap</a></li>
+                                    <li><a href="https://fun.umxyz.com/chess">中国象棋</a></li>
+                                    <li><a href="https://fun.umxyz.com/pacman">pacman</a></li>
+                                    <li><a href="http://www.ro.me/" target="_blank">ROME</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://api.uptimerobot.dashboard.umxyz.com/">
+                        <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" color="#54C1F0" size="5">
+                    </a>
+                    <ul class="actions">
+                        <li><a href="https://blog.umxyz.com/" class="button">博 客 入 口</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+
+            <!-- Footer -->
+            <footer id="footer">
+                <!-- &copy; Chenyu Zeng -->
+                <br>
+                <ul class="copyright">
+                    <li>Use: <a href="https://mcnb.top/" target="_blank">mcnb.top</a> &amp; <a href="https://github.com/BakaChinatsu/uuz-h5theme" target="_blank">uuz-h5theme</a> &amp; <a href="https://www.ihewro.com/archives/489" target="_blank">Typecho Handsome</a></li>
+                    <li>Powered: <a href="http://html5up.net/" target="_blank">HTML5 UP</a> &amp; <a href="https://auth.ihewro.com/user/index.html" target="_blank">Handsome用户社区</a></li>
+                </ul>
+            </footer>
+
+        </div>
+
+        <!-- Scripts -->
+        <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+        <script>
+            if ('addEventListener' in window) {
+                window.addEventListener('load', function() {
+                    document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+                });
+                document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+            }
+        </script>
+
+    </header>
+    <div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+        <div class="xl-chrome-ext-bar__logo"></div>
+
+        <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+        <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div>
+</body>
+
+</html>
