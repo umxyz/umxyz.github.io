@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <link rel="shortcut icon" href="https://img.umxyz.com/save/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, height = device-height, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
+    <title>my_2048</title>
+    <link rel="stylesheet" href="css/2048.css">
+    <script src="js/main2048.js" type="text/javascript"></script>
+    <script src="js/showanimation.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <audio id="combineMusic" autoplay="autoplay"></audio>
+    <div>
+        <header>
+            <h1>
+                <span>约</span>
+                <span>会</span>
+                <span>大</span>
+                <span>作</span>
+                <span>战</span>
+            </h1>
+        </header>
+        <div id="main">
+            <div id="record">
+                <div id="record1">
+                    <span id="score">情感值 ：6</span>
+                    <span id="addScore"></span>
+                </div>
+                <div id="newGame">
+                    <button onclick="newGame()">重新开始</button>
+                    <span id="face"></span>
+                </div>
+            </div>
+            <div id="gridContainer">
+                <table>
+                    <tr>
+                        <td class="boardCell" id="00"> </td>
+                        <td class="boardCell" id="01"> </td>
+                        <td class="boardCell" id="02"> </td>
+                        <td class="boardCell" id="03"> </td>
+                    </tr>
+                    <tr>
+                        <td class="boardCell" id="10"> </td>
+                        <td class="boardCell" id="11"> </td>
+                        <td class="boardCell" id="12"> </td>
+                        <td class="boardCell" id="13"> </td>
+                    </tr>
+                    <tr>
+                        <td class="boardCell" id="20"> </td>
+                        <td class="boardCell" id="21"> </td>
+                        <td class="boardCell" id="22"> </td>
+                        <td class="boardCell" id="23"> </td>
+                    </tr>
+                    <tr>
+                        <td class="boardCell" id="30"> </td>
+                        <td class="boardCell" id="31"> </td>
+                        <td class="boardCell" id="32"> </td>
+                        <td class="boardCell" id="33"> </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- <div id="bottom">
+	    	<hr>
+	    	<br>
+	    	<p id="p1"><strong>如何玩：</strong>使用← ↑ → ↓ 操作，相同的行为会让你有新的进展，希望你能达成最终目标！</p>
+	    	<br>
+	    	<hr>
+	    </div> -->
+        </div>
+        <div id="winMask">
+            <div id="winGame">
+                <p><b>winner winner chicken dinner!</b></p>
+                <button class="btn" onclick="again()">重新开始</button>
+                <button class="btn" onclick="keepGoing()">继续游戏</button>
+            </div>
+        </div>
+        <div id="overMask">
+            <div id="gameOver">
+                <p><b>Game over!</b></p>
+                <p>🙈</p>
+                <button class="btn" onclick="again()">重新开始</button>
+            </div>
+        </div>
+</body>
+
+</html>
