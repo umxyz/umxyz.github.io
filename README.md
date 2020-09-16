@@ -3,3 +3,5 @@
 # 于是把GPC关了
 
 ## 就用[GitHub Pages](https://pages.github.com/)暂时放一下个人主页
+
+> [入口：https://umxyz.com/](https://umxyz.com/)
