@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <input type="text" value="" onkeyup="filter(this.value);" />
+    <ol id="list">
+    </ol>
+    <div id="pageDiv"></div>
+</body>
+
+</html>
+
+<script>
+    arr = ['5','2'];
+
+    function parseJSON(str) {
+        var fn = new Function('var result=' + str + ';return result;')
+        return fn();
+    }
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://www.hitsz.top/generator/data.json', true);
+
+    xhr.onreadystatechange = async function() {
+        console.log('29:'+arr)
+        if (this.readyState == 4) {
+            var text = this.responseText;
+            var data = parseJSON(text);
+            var jsonStr = {};
+            arr = []
+            for (var group in data) {
+                var tmp = data[group]
+                for (item in tmp) {
+                    arr.push(tmp[item]);
+                }
+            }
+            console.log('41:'+arr)
+        }
+    }
+
+    function delay() {
+      // `delay` returns a promise
+      return new Promise(function(resolve, reject) {
+        // Only `delay` is able to resolve or reject the promise
+        setTimeout(function() {
+          resolve(42); // After 3 seconds, resolve the promise with value 42
+        }, 3000);
+      });
+    }
+
+    xhr.send();
+console.log('45:'+arr)
+
+    var datas = [],
+        Filtered = [],
+        page = 1,
+        pagesize = 10,
+        pageData = [];
+    console.log(datas)
+
+    //生成模拟数据
+async function ini(arr){
+    await delay();
+    for (var i in arr) {
+        datas.push(arr[i]['name'] + ': ' + arr[i]['url']);
+    }
+    console.log(datas)
+}
+    ini(arr);
+
+    //过滤
+async function filter(q) {
+
+        Filtered = [];
+        if (q == '') {
+            Filtered = datas;
+        } else {
+            for (var i = 0, n = datas.length; i < n; i++) {
+                if (datas[i].toLowerCase().indexOf(q.toLowerCase()) > -1) {
+                    Filtered.push(datas[i]);
+                }
+            }
+        }
+        render();
+    }
+    //渲染数据
+async function render() {
+        await delay();
+        document.getElementById('list').innerHTML = getPageData();
+        setPageInfo();
+    }
+    //转到指定页
+    function goPage(n) {
+        page = n;
+        render();
+    }
+    //取得当前页数据
+    function getPageData() {
+        if ((page - 1) * pagesize > Filtered.length) {
+            page = Math.ceil(Filtered.length / pagesize);
+        }
+        var n = Math.min(pagesize, Filtered.length - (page - 1) * pagesize);
+        pageData = Filtered.slice((page - 1) * pagesize, n + (page - 1) * pagesize);
+        var html = [];
+        for (var i = 0, n = pageData.length; i < n; i++) {
+            html.push('<li>' + pageData[i] + '</li>');
+        }
+        return html.join("");
+    }
+    //设置分页条信息
+    function setPageInfo() {
+        var pageinfo = '';
+        var pageCount = Math.ceil(Filtered.length / pagesize);
+        if (pageCount <= 1) {
+            document.getElementById('pageDiv').innerHTML = '';
+            return;
+        }
+        if (page > 1) {
+            pageinfo += '<a href="javascript:void(0);" onclick="goPage(1);">首页</a> ';
+        }
+        if (page > 10) {
+            pageinfo += '<a href="javascript:void(0);" onclick="goPage(' + (page - 10) + ');">前10页</a> ';
+        }
+        for (var i = Math.max(1, page - 10); i < page; i++) {
+            pageinfo += '<a href="javascript:void(0);" onclick="goPage(' + i + ');">' + i + '</a> ';
+        }
+        pageinfo += page + ' ';
+
+        for (var i = page + 1; i <= Math.min(10 + page, pageCount); i++) {
+            pageinfo += '<a href="javascript:void(0);" onclick="goPage(' + i + ');">' + i + '</a> ';
+        }
+        if (page + 10 < pageCount) {
+            pageinfo += '<a href="javascript:void(0);" onclick="goPage(' + (page + 10) + ');">后10页</a> ';
+        }
+        if (page < pageCount) {
+            pageinfo += '<a href="javascript:void(0);" onclick="goPage(' + pageCount + ');">末页</a> ';
+        }
+        document.getElementById('pageDiv').innerHTML = pageinfo;
+    }
+    Filtered = datas;
+    render();
+</script>
