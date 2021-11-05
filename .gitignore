@@ -1,3 +1,4 @@
-*.log
-_gsdata_
-.DS_Store
+.gitignore
+**/*.log
+**/_gsdata_
+**/.DS_Store
