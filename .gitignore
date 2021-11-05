@@ -1,3 +1,4 @@
+.gitignore
 **/*.log
 **/_gsdata_
 **/.DS_Store
